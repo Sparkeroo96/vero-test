@@ -28,7 +28,6 @@ function SongDetails(props) {
 }
 
 function PurchaseSong() {
-    console.log("clicked button");
     var emailInput = document.querySelector("#emailInput")
     console.log(emailInput);
     //You would submit to an API/payment provider to complete purchase here

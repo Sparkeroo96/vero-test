@@ -39,6 +39,8 @@ One of react's selling points is its "Virtual Dom" which is supposed to increase
 ## 2b Security - Backend 
 To allow requests from the frontend to reach the backend I have enabled Cors only for the domain of http://localhost:3000, which is the default one for the react app to start in. This is to stop other resources gaining access to the API and its backend.
 
+# 3 You're still logging the email
+This is just to show that the email has been read, in an actual case we wouldnt log this to console and we would check its valid
 # If there were more time...
 
 ## 1. Completing the remaining tasks
@@ -48,17 +50,19 @@ I was greatly disapointed to not be able to complete the given tasks in the requ
 - Basic Site navigation
 - Basic data interaction
 
-## 2. Adding Session data
+## 2. Unit Tests
+Unit tests would be added to the API to ensure it continues to work and will not break the front end when changes are made to it.
+## 3. Adding Session data
 Adding session data to store the viewed pages I would likely install a react library such as Redux React Session [https://www.npmjs.com/package/redux-react-session] in order to do this, this would also allow for authentication and user security down the line.
 
 Every time you would render a react component I would check the session to ensure it hasnt already been added, then if not I would add its ID to an array in session in order to have it on the home page.
 
 This session could also track the "bought songs" in order to not show these ones in the home page.
 
-## 3 Completing the Home page
+## 4. Completing the Home page
 The app by default gets all songs from the API, you could get song ids from the session and then the song data from the api response to show the viewied ones on the home page
 
-## 4 Purchasing songs
+## 5. Purchasing songs
 The email validation would need to be done. 
 Store bought songs in the session to filter them out of the home page
 

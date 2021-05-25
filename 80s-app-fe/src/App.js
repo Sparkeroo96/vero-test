@@ -30,9 +30,7 @@ function App() {
 		})
 			.then(res => res.json())
 			.then((result) => {
-				console.log(result);
 				setSongs(result);
-				setIsLoaded(true);
 			},
 				(error) => {
 					setIsLoaded(true);
@@ -40,8 +38,12 @@ function App() {
 				})
 	}, [])
 
-
-	return RenderPage(songs);
+	if(error){
+		return (<div> Error: {error.message}</div>)
+	}
+	else {
+		return RenderPage(songs);
+	}
 }
 
 function RenderPage(songs){

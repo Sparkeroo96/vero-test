@@ -6,7 +6,6 @@ import {
 
 function SongComponent(props) {
 
-    console.log("Song Id: " + props.song.id)
     return (
         <div className="SongComponet">
             <Link to={{
